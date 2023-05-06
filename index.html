@@ -11,21 +11,86 @@
 			padding: 0;
 			}
 
-		body,
+		body{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			}
 		#bocared{
 				position: absolute;
-				width: 100%;
-				height: 100%;
-				}
-		#bocared{
+				width: 300px;
+				height: 266px;
+				top: 50%;
+				left: 50%;
+				bottom: 0;
+				margin: -250px -150px;
 				background: url(https://www.bocared.co/pub/media/logo/stores/1/LOGO2.png) #000;
 				background-repeat: no-repeat;
-				background-position: center;
+				background-position: center 200px;
+				color: #fff;
+				font-size: 180px;
+				text-align: center;
 				}
+				#bocared:after{
+								content: '';
+								position: absolute;
+								bottom: -33px;
+								right: 0;
+								width: 200px;
+								height: 33px;
+								background: #000;								
+								}
+				iframe{
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						bottom: 0;
+						margin: -250px -150px;
+						border: 0;
+						}
+
+				#telon{
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					width: 320px;
+					height: 320px;
+					margin: -260px -160px;
+					background: #000
+					}
+					.yt-cover,
+					.ytp-popup 
+					.ytp-contextmenu,
+					.ytp-menuitem,
+					.ytp-menuitem-label,
+					.ytp-popup.ytp-contextmenu{
+					visibility: hidden !important;
+					opacity: 0 !important;
+					}
 	</style>
 </head>
 <body>
-<div id="bocared"></div>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/UAQaGoyVUKU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div id="telon"></div>
+<iframe width="300" height="300" src="https://www.youtube.com/embed/UAQaGoyVUKU?autoplay=1&mute=1&rel=0"></iframe>
+<div id="bocared">
+	
+♪
+
+</div>
+<script type="text/javascript">
+
+//	document.oncontextmenu = function(){return false}
+
+	var bg = 60;
+
+	setInterval(function(){
+					//	document.body.bocared.style.color = 'hsl('+bg+',100%,40%)';
+						document.getElementById('bocared').style.color = 'hsl('+bg+',100%,60%)';
+					//	document.body.style.backgroundColor = 'hsl('+bg+',100%,40%)';
+						bg = bg==360? 1 : bg + 1;
+						}, 10)
+
+</script>
 </body>
 </html>
