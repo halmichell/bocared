@@ -103,19 +103,22 @@
 <iframe width="300" height="300" src="https://www.youtube.com/embed/Znl4lwbGsaM?autoplay=0&mute=0&rel=0"></iframe>
 <div id="bocared">
 <div id="store">music • store</div>
-	<div id="initial">▶</div>
+	<div id="initial">
+		<svg id="play_svg" version="1.1" id="Layer_1" width="20px" fill="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 92.2 122.88" style="enable-background:new 0 0 92.2 122.88" xml:space="preserve">
+		<g><polygon points="92.2,60.97 0,122.88 0,0 92.2,60.97"/></g></svg>
+	</div>
 
 </div>
 
 
 <script type="text/javascript">
 
-	document.oncontextmenu = function(){return false}
+//	document.oncontextmenu = function(){return false}
 
 	var bg = 60;
 
 	setInterval(function(){
-						document.getElementById('initial').style.color = 'hsl('+bg+',100%,70%)';
+						document.getElementById('play_svg').setAttribute( 'fill', 'hsl('+bg+',100%,70%)' );
 						bg = bg==360? 1 : bg + 1;
 						}, 20)
 
